@@ -51,4 +51,12 @@ describe("<Applicatin >", () => {
 
     expect(nameElement).toBeInTheDocument(); 
   });
+
+  test("img renders correctly", () => {
+    render(<Application />);
+    
+    const imageElement = screen.getByAltText(/a person with laptop/i);
+
+    expect(imageElement).toBeInTheDocument(); 
+  });
 });
