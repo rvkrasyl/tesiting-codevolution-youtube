@@ -30,9 +30,17 @@ describe("<Applicatin >", () => {
 
   test("name input renders correctly", () => {
     render(<Application />);
-    
+
     const nameElement = screen.getByPlaceholderText(/fullname/i);
 
     expect(nameElement).toBeInTheDocument(); 
+  });
+
+  test("paragraph with note renders correctly", () => {
+    render(<Application />);
+    
+    const paragraphElement = screen.getByText(/all fields are mandatory/i);
+
+    expect(paragraphElement).toBeInTheDocument(); 
   });
 });
