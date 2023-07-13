@@ -1,7 +1,7 @@
 import { render, screen } from "@testing-library/react";
 import { Application } from "./Application";
 
-describe("<Applicatin >", () => {
+describe("<Application >", () => {
   test("headers renders correctly", () => {
     render(<Application />);
 
@@ -66,5 +66,13 @@ describe("<Applicatin >", () => {
     const closeElement = screen.getByTitle(/close/i);
 
     expect(closeElement).toBeInTheDocument(); 
+  });
+
+  test("custom element renders correctly", () => {
+    render(<Application />);
+    
+    const customElement = screen.getByTestId("custom-element");
+
+    expect(customElement).toBeInTheDocument(); 
   });
 });
