@@ -59,4 +59,12 @@ describe("<Applicatin >", () => {
 
     expect(imageElement).toBeInTheDocument(); 
   });
+
+  test("close element renders correctly", () => {
+    render(<Application />);
+    
+    const closeElement = screen.getByTitle(/close/i);
+
+    expect(closeElement).toBeInTheDocument(); 
+  });
 });
