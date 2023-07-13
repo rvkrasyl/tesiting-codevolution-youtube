@@ -1,4 +1,8 @@
+import { useState } from "react";
+
 export const Application = () => {
+  const [fullname, setFullName] = useState<string>("Arjen Robben");
+
   return (
     <>
       <h1>Job application form</h1>
@@ -11,6 +15,8 @@ export const Application = () => {
             placeholder="Fullname"
             type="text" 
             id="name" 
+            value={fullname}
+            onChange={(e) => setFullName(e.target.value)}
           />
         </div>
         <div>

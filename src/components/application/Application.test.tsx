@@ -43,4 +43,12 @@ describe("<Applicatin >", () => {
 
     expect(paragraphElement).toBeInTheDocument(); 
   });
+
+  test("name input renders with expected value", () => {
+    render(<Application />);
+    
+    const nameElement = screen.getByDisplayValue(/Arjen Robben/i);
+
+    expect(nameElement).toBeInTheDocument(); 
+  });
 });
