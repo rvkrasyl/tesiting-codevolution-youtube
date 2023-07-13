@@ -19,4 +19,20 @@ describe("<Skills />", () => {
 
     expect(listItemElements).toHaveLength(skills.length);
   });
+
+  test("login button renders by default", () => {
+    render(<Skills skills={skills} />);
+
+    const buttonElements = screen.getByRole("button", { name: "Login"});
+
+    expect(buttonElements).toBeInTheDocument();
+  });
+
+  test("Start learning is not rendered by default", () => {
+    render(<Skills skills={skills} />);
+
+    const startLearningButtonElements = screen.queryByRole("button", { name: "Start learning"});
+
+    expect(startLearningButtonElements).not.toBeInTheDocument();
+  });
 })
