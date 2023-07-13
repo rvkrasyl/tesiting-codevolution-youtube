@@ -27,4 +27,12 @@ describe("<Applicatin >", () => {
     expect(termsElement).toBeInTheDocument();
     expect(submitButtonElement).toBeInTheDocument();
   });
+
+  test("name input renders correctly", () => {
+    render(<Application />);
+    
+    const nameElement = screen.getByPlaceholderText(/fullname/i);
+
+    expect(nameElement).toBeInTheDocument(); 
+  });
 });
