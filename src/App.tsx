@@ -1,6 +1,4 @@
 import './App.css';
-import { Application } from './components/application/Application';
-import { Counter } from './components/counter/Counter';
 import { MuiMode } from './components/mui/MuiMode';
 import { AppProviders } from './providers/AppProviders';
 

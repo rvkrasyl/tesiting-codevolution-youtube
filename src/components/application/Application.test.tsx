@@ -75,4 +75,12 @@ describe("<Application >", () => {
 
     expect(customElement).toBeInTheDocument(); 
   });
+
+  test("submit button renders correctly", () => {
+    render(<Application />);
+    
+    const submitButton = screen.getByRole("button");
+
+    expect(submitButton).toBeDisabled(); 
+  });
 });
