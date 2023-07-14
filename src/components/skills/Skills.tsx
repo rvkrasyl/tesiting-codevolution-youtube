@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 
 type SkillProps = {
-    skills: string[];
+  skills: string[];
 };
 
 export const Skills = (props: SkillProps) => {
@@ -14,18 +14,18 @@ export const Skills = (props: SkillProps) => {
     }, 1001);
   }, []);
 
-  return(
+  return (
     <>
       <ul>
         {skills.map((skill) => {
-          return <li key={skill}>{skill}</li>
+          return <li key={skill}>{skill}</li>;
         })}
       </ul>
-      {
-        isLoggedIn
-          ? <button>Start learning</button>
-          : <button onClick={() => setIsLoggedIn(true)}>Login</button>
-      }
+      {isLoggedIn ? (
+        <button>Start learning</button>
+      ) : (
+        <button onClick={() => setIsLoggedIn(true)}>Login</button>
+      )}
     </>
   );
 };

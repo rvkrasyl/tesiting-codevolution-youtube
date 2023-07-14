@@ -21,8 +21,8 @@ describe("<Application >", () => {
     const termsElement = screen.getByRole("checkbox");
     const submitButtonElement = screen.getByRole("button");
 
-    expect(bioElement).toBeInTheDocument(); 
-    expect(nameElement).toBeInTheDocument(); 
+    expect(bioElement).toBeInTheDocument();
+    expect(nameElement).toBeInTheDocument();
     expect(jobLocationElement).toBeInTheDocument();
     expect(termsElement).toBeInTheDocument();
     expect(submitButtonElement).toBeInTheDocument();
@@ -33,54 +33,54 @@ describe("<Application >", () => {
 
     const nameElement = screen.getByPlaceholderText(/fullname/i);
 
-    expect(nameElement).toBeInTheDocument(); 
+    expect(nameElement).toBeInTheDocument();
   });
 
   test("paragraph with note renders correctly", () => {
     render(<Application />);
-    
+
     const paragraphElement = screen.getByText(/all fields are mandatory/i);
 
-    expect(paragraphElement).toBeInTheDocument(); 
+    expect(paragraphElement).toBeInTheDocument();
   });
 
   test("name input renders with expected value", () => {
     render(<Application />);
-    
+
     const nameElement = screen.getByDisplayValue(/Arjen Robben/i);
 
-    expect(nameElement).toBeInTheDocument(); 
+    expect(nameElement).toBeInTheDocument();
   });
 
   test("img renders correctly", () => {
     render(<Application />);
-    
+
     const imageElement = screen.getByAltText(/a person with laptop/i);
 
-    expect(imageElement).toBeInTheDocument(); 
+    expect(imageElement).toBeInTheDocument();
   });
 
   test("close element renders correctly", () => {
     render(<Application />);
-    
+
     const closeElement = screen.getByTitle(/close/i);
 
-    expect(closeElement).toBeInTheDocument(); 
+    expect(closeElement).toBeInTheDocument();
   });
 
   test("custom element renders correctly", () => {
     render(<Application />);
-    
+
     const customElement = screen.getByTestId("custom-element");
 
-    expect(customElement).toBeInTheDocument(); 
+    expect(customElement).toBeInTheDocument();
   });
 
   test("submit button renders correctly", () => {
     render(<Application />);
-    
+
     const submitButton = screen.getByRole("button");
 
-    expect(submitButton).toBeDisabled(); 
+    expect(submitButton).toBeDisabled();
   });
 });

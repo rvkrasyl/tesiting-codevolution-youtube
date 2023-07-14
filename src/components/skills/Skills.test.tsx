@@ -3,7 +3,7 @@ import { Skills } from "./Skills";
 
 describe("<Skills />", () => {
   const skills = ["HTMS", "CSS", "JavaScript", "React", "Jest"];
-  
+
   test("renders correctly", () => {
     render(<Skills skills={skills} />);
 
@@ -23,7 +23,7 @@ describe("<Skills />", () => {
   test("login button renders by default", () => {
     render(<Skills skills={skills} />);
 
-    const buttonElements = screen.getByRole("button", { name: "Login"});
+    const buttonElements = screen.getByRole("button", { name: "Login" });
 
     expect(buttonElements).toBeInTheDocument();
   });
@@ -31,7 +31,9 @@ describe("<Skills />", () => {
   test("Start learning is not rendered by default", () => {
     render(<Skills skills={skills} />);
 
-    const startLearningButtonElements = screen.queryByRole("button", { name: "Start learning"});
+    const startLearningButtonElements = screen.queryByRole("button", {
+      name: "Start learning",
+    });
 
     expect(startLearningButtonElements).not.toBeInTheDocument();
   });
@@ -40,8 +42,12 @@ describe("<Skills />", () => {
     const view = render(<Skills skills={skills} />);
     logRoles(view.container);
     // screen.debug();
-    const startLearningButtonElements = await screen.findByRole("button", { name: "Start learning"}, { timeout: 2000 }); // default timeout is 1000ms
+    const startLearningButtonElements = await screen.findByRole(
+      "button",
+      { name: "Start learning" },
+      { timeout: 2000 },
+    ); // default timeout is 1000ms
     // screen.debug();
     expect(startLearningButtonElements).toBeInTheDocument();
   });
-})
+});

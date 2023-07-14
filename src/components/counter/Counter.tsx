@@ -7,7 +7,9 @@ export const Counter = () => {
   return (
     <div>
       <h1>{count}</h1>
-      <button onClick={() => setCount((prevCount) => prevCount + 1)}>Increment</button>
+      <button onClick={() => setCount((prevCount) => prevCount + 1)}>
+        Increment
+      </button>
       <input
         type="number"
         name="amount"

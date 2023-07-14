@@ -8,7 +8,7 @@ describe("<Counter />", () => {
 
     const countElement = screen.getByRole("heading");
     const incrementButton = screen.getByRole("button", { name: "Increment" });
-    
+
     expect(countElement).toBeInTheDocument();
     expect(incrementButton).toBeInTheDocument();
   });
@@ -17,7 +17,7 @@ describe("<Counter />", () => {
     render(<Counter />);
 
     const countElement = screen.getByRole("heading");
-    
+
     expect(countElement).toHaveTextContent("0");
   });
 

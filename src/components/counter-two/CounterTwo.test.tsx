@@ -12,14 +12,14 @@ describe("<CounterTwo />", () => {
   });
 
   test("increment/decrement buttons are available when handlers passed", () => {
-    const incrementHandler = jest.fn()
-    const decrementHandler = jest.fn()
+    const incrementHandler = jest.fn();
+    const decrementHandler = jest.fn();
     render(
       <CounterTwo
         count={0}
         handleIncrement={incrementHandler}
         handleDecrement={decrementHandler}
-      />
+      />,
     );
 
     const incrementButton = screen.getByRole("button", { name: "Increment" });
@@ -30,14 +30,14 @@ describe("<CounterTwo />", () => {
   });
 
   test("handlers are called", async () => {
-    const incrementHandler = jest.fn()
-    const decrementHandler = jest.fn()
+    const incrementHandler = jest.fn();
+    const decrementHandler = jest.fn();
     render(
       <CounterTwo
         count={0}
         handleIncrement={incrementHandler}
         handleDecrement={decrementHandler}
-      />
+      />,
     );
 
     const incrementButton = screen.getByRole("button", { name: "Increment" });

@@ -16,8 +16,8 @@ export const Application = () => {
           <label htmlFor="name">Name</label>
           <input
             placeholder="Fullname"
-            type="text" 
-            id="name" 
+            type="text"
+            id="name"
             value={fullname}
             onChange={(e) => setFullName(e.target.value)}
           />
