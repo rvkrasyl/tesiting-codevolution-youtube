@@ -1,12 +1,9 @@
-import { render, screen } from "@testing-library/react";
+import { render, screen } from "../../test-itils";
 import { MuiMode } from "./MuiMode";
-import { AppProviders } from "../../providers/AppProviders";
 
 describe("<MuiMode />", () => {
   test('renders correctly', () => {
-    render(<MuiMode />, {
-      wrapper: AppProviders
-    });
+    render(<MuiMode />);
 
     const headingElement = screen.getByRole("heading");
 
